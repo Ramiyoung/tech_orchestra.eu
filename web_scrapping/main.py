@@ -12,6 +12,9 @@ args = parser.parse_args()
 website = args.link
 d = args.depth[0]
 
-pprint.pprint(scrapping.scrapper(website, d))
+plop = scrapping.scrapper(website, d)
+plop = list(dict.fromkeys(plop))
+for w in plop :
+    print("[{position}]: {website}".format(position=plop.index(w), website=w))
 
      

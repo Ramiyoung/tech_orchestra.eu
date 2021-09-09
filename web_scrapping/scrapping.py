@@ -15,6 +15,7 @@ def scrapper(websites, depth):
                 pass
             else:
                 wsu = w.split('/')
+                print("[{position}]: {website}".format(position=websites.index(w), website=w))
                 p_wsu = [e for e in wsu if "http" not in e ]
                 domparam = list(filter(None, p_wsu))
                 html_file = ('-'.join(domparam))
